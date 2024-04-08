@@ -1,11 +1,8 @@
-import javax.swing.*;
-
 public class Main {
   public static void main(String[] args) {
-    SwingUtilities.invokeLater(() -> {
-      TicTacToeModel model = new TicTacToeModel();
-      TicTacToeView view = new TicTacToeView(model);
-      view.setVisible(true);
-    });
+    TicTacToe m = new TicTacToeModel();
+    SwingTicTacToeView v = new SwingTicTacToeView("Tic-Tac-Toe");
+    TicTacToeController c = new SwingTicTacToeController(v, m);
+    c.playGame(m);
   }
 }
