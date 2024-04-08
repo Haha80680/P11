@@ -1,3 +1,5 @@
+package tictactoe;
+
 public class Main {
   public static void main(String[] args) {
     TicTacToe m = new TicTacToeModel();

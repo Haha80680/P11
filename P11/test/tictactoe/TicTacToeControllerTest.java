@@ -1,7 +1,15 @@
+package tictactoe;
+
 import static org.junit.Assert.assertEquals;
 import java.io.StringReader;
 import java.util.Arrays;
 import org.junit.Test;
+
+import tictactoe.FailingAppendable;
+import tictactoe.TicTacToe;
+import tictactoe.TicTacToeConsoleController;
+import tictactoe.TicTacToeController;
+import tictactoe.TicTacToeModel;
 
 /**
  * Test cases for the tic tac toe controller, using mocks for readable and appendable.
