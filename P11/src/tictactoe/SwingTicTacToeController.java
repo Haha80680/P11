@@ -3,10 +3,20 @@ package tictactoe;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * The controller class that can collaborate with SwingTicTacToeView class and TicTacToeModel class.
+ * By MVC pattern, make the game playable on GUI.
+ */
 public class SwingTicTacToeController implements TicTacToeController {
   private final TicTacToe model;
   private final SwingTicTacToeView view;
 
+  /**
+   * Constructs a SwingTicTacToeController with the specified view and model.
+   *
+   * @param view  The SwingTicTacToeView instance this controller will manage.
+   * @param model The TicTacToe game logic model.
+   */
   public SwingTicTacToeController(SwingTicTacToeView view, TicTacToe model) {
     this.view = view;
     this.model = model;
@@ -19,6 +29,9 @@ public class SwingTicTacToeController implements TicTacToeController {
     view.setGameStatus("Turn: " + model.getTurn());
   }
 
+  /**
+   * Listener class that implements ActionListener. Define suitable actions for the buttons.
+   */
   private class ButtonListener implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
